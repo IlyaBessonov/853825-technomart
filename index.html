@@ -9,9 +9,16 @@
       <a class="main-header-logo">
         <img src="img/logo.svg" width="250" height="80" alt="Логотип ТЕХНОМАРТа">
       </a>
-      <p class="main-search">
-        <!--Форма поиска-->
-      </p>
+      <section class="main-search">
+        <h2 class="visually-hidden">Поиск на сайте</h2>        
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="search_text" class="visually-hidden">Поиск на сайте</label>
+            <input type="text" id="search_text" name="search_text" placeholder="Поиск"/>
+          </p>
+          <button class="button" type="submit" aria-label="Отправить"></button>                  
+        </form>
+      </section>
       <a class="button bookmark-button" href="bookmarks.html">
         <span>Закладки:</span>
         <span class="counter-bookmarks">0</span>
@@ -73,10 +80,10 @@
         <figure class="slider">
           <h3>Перфораторы</h3>
           <p>Настоящие мужские игрушки</p>
-          <span class="slider slider-image"></span><img src="img/slider1.jpg" width="620" height="266" alt="Перфораторы"></span>
-          <span class="slider slider-image visually-hidden"></span><img src="img/slider2.jpg" width="620" height="266" alt="Перфораторы"></span>
-          <span class="button slider-button slider-button-back"><img src="img/icon-left.svg" alt="Предыдущий"></span>
-          <span class="button slider-button slider-button-next"><img src="img/icon-right.svg" alt="Следующий"></span>
+          <span class="slider slider-image"><img src="img/slider1.jpg" width="620" height="266" alt="Перфораторы"></span>
+          <span class="slider slider-image visually-hidden"><img src="img/slider2.jpg" width="620" height="266" alt="Перфораторы"></span>
+          <button class="button slider-button slider-button-back" type="button" aria-label="Предыдущий"></button>
+          <button class="button slider-button slider-button-next" type="button" aria-label="Следующий"></button>
           <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>  
         </figure> 
       </section>
@@ -254,11 +261,9 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <figure class="map">
-            <a href="map.html">
-              <img src="img/map.png" width="300" height="158" alt="Расположение офиса">
-            </a>
-          </figure> 
+          <a class="button" href="map.html">
+            <img src="img/map.png" width="300" height="158" alt="Расположение офиса">
+          </a>
           <a class="button" href="feedback.html">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
       </section>      
     </main>
@@ -307,8 +312,31 @@
     </footer>
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!--Здесь будет форма-->
-      <span class="modal-close">x</span>
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="fullname">Ваше имя:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Имя Фамилия"/>
+          </p>
+          <p>
+            <label for="email">Ваш e-mail:</label>
+            <input type="text" id="email" name="email" placeholder="email@example.com"/>
+          </p>          
+          <p>
+            <label for="letter_text">Текст письма:</label>
+            <textarea id="letter_text" name="letter_text" placeholder="В свободной форме">
+            </textarea>
+          </p>  
+          <button class="button" type="submit">Отправить</button>                  
+      </form>
+      <button class="modal-close" aria-label="Закрыть окно"></button>
+    </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map_big.png" width="940" height="446" alt="Расположение офиса">
+      </p>
+      <button class="modal-close" aria-label="Закрыть окно"></button>
     </section>
   </body>
 </html>

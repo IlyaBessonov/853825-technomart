@@ -9,9 +9,16 @@
       <a class="main-header-logo" href="main.html">
         <img src="img/logo.svg" width="250" height="80" alt="Логотип ТЕХНОМАРТа">
       </a>
-      <p class="main-search">
-        <!--Форма поиска-->
-      </p>
+      <section class="main-search">
+        <h2 class="visually-hidden">Поиск на сайте</h2>
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset>
+            <label for="search_text" class="visually-hidden">Поиск на сайте</label>
+            <input type="text" id="search_text" name="search_text" placeholder="Поиск"/>
+          </fieldset>
+          <button class="button" type="submit" aria-label="Отправить"></button>                  
+        </form>
+      </section>
       <a class="button bookmark-button" href="bookmarks.html">
         <span>Закладки:</span>
         <span class="counter-bookmarks">0</span>
@@ -57,7 +64,76 @@
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!--Здесь будет форма-->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Цена:</legend>
+            <label for="filter-price-min" aria-label="Минимальная цена">0</label>
+            <input class="visually-hidden" name="price-min" id="filter-price-min" type="text">
+            <label for="filter-price-max" aria-label="Максимальная цена">30000</label>
+            <input class="visually-hidden" name="price-max" id="filter-price-max" type="text">
+            <span class="filter-range"></span>
+          </fieldset>
+          <fieldset>
+              <legend>Производители:</legend>
+                <Ul>
+                  <li class="filter-option">
+                    <label class="filter-checkbox" for="filter-bosch">
+                      <input class="visually-hidden" name="bosch" id="filter-bosch" type="checkbox">
+                      Bosch
+                      <span class="checkbox-indicator"></span>
+                    </label>
+                  </li>
+                  <li class="filter-option">
+                    <label class="filter-checkbox" for="filter-interskol">
+                        <input class="visually-hidden" name="interskol" id="filter-interskol" type="checkbox">
+                        Интерскол
+                        <span class="checkbox-indicator"></span>                        
+                    </label>
+                  </li>
+                  <li class="filter-option">
+                    <label class="filter-checkbox" for="filter-makita">
+                        <input class="visually-hidden" name="makita" id="filter-makita" type="checkbox">
+                        Makita
+                        <span class="checkbox-indicator"></span>                        
+                    </label>                    
+                  </li>
+                  <li class="filter-option">
+                    <label class="filter-checkbox" for="filter-dewalt">
+                        <input class="visually-hidden" name="dewalt" id="filter-dewalt" type="checkbox">
+                        Dewalt
+                        <span class="checkbox-indicator"></span>                        
+                    </label>                       
+                  </li>
+                  <li class="filter-option">
+                    <label class="filter-checkbox" for="filter-hitachi">
+                      <input class="visually-hidden" name="hitachi" id="filter-hitachi" type="checkbox">
+                      Hitachi
+                      <span class="checkbox-indicator"></span>                      
+                    </label>   
+                  </li>
+                </Ul>
+          </fieldset>
+          <fieldset>
+              <legend>Питание:</legend>
+              <Ul>
+                <li class="filter-option">
+                  <label class="filter-radio" for="filter-battery">
+                    <input class="visually-hidden" name="filter-power" id="filter-battery" type="radio" value="battery">
+                    Аккумуляторные
+                    <span class="radio-indicator"></span>                      
+                  </label>                    
+                </li>
+                <li class="filter-option">
+                  <label class="filter-radio" for="filter-outpower">
+                    <input class="visually-hidden" name="filter-power" id="filter-outpower" type="radio" value="outpower">
+                    Сетевые
+                    <span class="radio-indicator"></span>                      
+                  </label>                                      
+                </li>
+              </Ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button> 
+        </form>
       </section>
       <section class="catalog">
         <h3 class="visually-hidden">Список перфораторов</h3>
@@ -73,17 +149,15 @@
         </ul>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <h3>
-              <a href="snippet1.html">
+            <a href="snippet1.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 3000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image">
-              <a href="snippet1.html">
+              </h3>
+              <p class="catalog-item-image">
                 <img src="img/snippet1.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 3000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">22500</span>
             <a class="button goods-button" href="#">15500</a>
             <ul class="actions-items visually-hidden">
@@ -96,17 +170,15 @@
             </ul>            
           </li>
           <li class="catalog-item">
-            <h3>
-              <a href="snippet2.html">
+            <a href="snippet2.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 6000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image">
-              <a href="snippet2.html">
+              </h3>
+              <p class="catalog-item-image">
                 <img src="img/snippet2.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 6000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">30500</span>
             <a class="button goods-button" href="#">25500</a>
             <ul class="actions-items visually-hidden">
@@ -119,17 +191,15 @@
             </ul>            
           </li>          
           <li class="catalog-item">
-              <h3>
-                <a href="snippet3.html">
+              <a href="snippet3.html">
+                <h3>
                   <span class="catalog-category">Перфоратор BOSCH</span>
                   <span class="catalog-item-title">BFG 2000</span>
-                </a>
-              </h3>
-              <p class="catalog-item-image new">
-                <a class="visually-hidden" href="snippet3.html">
+                </h3>
+                <p class="catalog-item-image new">
                   <img src="img/snippet3.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 2000">
-                </a>
-              </p>
+                </p>
+              </a>                
               <span class="price-before visually-hidden"></span>
               <a class="button goods-button" href="#">12500</a>
               <ul class="actions-items">
@@ -142,17 +212,15 @@
               </ul>            
             </li>                    
           <li class="catalog-item">
-            <h3>
-              <a href="snippet1.html">
+            <a href="snippet1.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 3000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image">
-              <a href="snippet1.html">
+              </h3>
+              <p class="catalog-item-image">
                 <img src="img/snippet1.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 3000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">22500</span>
             <a class="button goods-button" href="#">15500</a>
             <ul class="actions-items visually-hidden">
@@ -165,17 +233,15 @@
             </ul>            
           </li>
           <li class="catalog-item">
-            <h3>
-              <a href="snippet2.html">
+            <a href="snippet2.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 6000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image new">
-              <a href="snippet2.html">
+              </h3>
+              <p class="catalog-item-image new">
                 <img src="img/snippet2.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 6000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">30500</span>
             <a class="button goods-button" href="#">25500</a>
             <ul class="actions-items visually-hidden">
@@ -188,17 +254,15 @@
             </ul>            
           </li>          
           <li class="catalog-item">
-            <h3>
-              <a href="snippet3.html">
+            <a href="snippet3.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 2000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image new">
-              <a href="snippet3.html">
+              </h3>
+              <p class="catalog-item-image new">
                 <img src="img/snippet3.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 2000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before visually-hidden"></span>
             <a class="button goods-button" href="#">12500</a>
             <ul class="actions-items visually-hidden">
@@ -211,17 +275,15 @@
             </ul>            
           </li>                  
           <li class="catalog-item">
-            <h3>
-              <a href="snippet1.html">
+            <a href="snippet1.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 3000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image new">
-              <a href="snippet1.html">
+              </h3>
+              <p class="catalog-item-image new">
                 <img src="img/snippet1.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 3000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">22500</span>
             <a class="button goods-button" href="#">15500</a>
             <ul class="actions-items visually-hidden">
@@ -234,17 +296,15 @@
             </ul>            
           </li>
           <li class="catalog-item">
-            <h3>
-              <a href="snippet2.html">
+            <a href="snippet2.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 6000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image">
-              <a href="snippet2.html">
+              </h3>
+              <p class="catalog-item-image">
                 <img src="img/snippet2.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 6000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before">30500</span>
             <a class="button goods-button" href="#">25500</a>
             <ul class="actions-items visually-hidden">
@@ -257,17 +317,15 @@
             </ul>            
           </li>          
           <li class="catalog-item">
-            <h3>
-              <a href="snippet3.html">
+            <a href="snippet3.html">
+              <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 2000</span>
-              </a>
-            </h3>
-            <p class="catalog-item-image new">
-              <a href="snippet3.html">
+              </h3>
+              <p class="catalog-item-image new">
                 <img src="img/snippet3.jpg" width="220" height="170" alt="Перфоратор  BOSCH BFG 2000">
-              </a>
-            </p>
+              </p>
+            </a>              
             <span class="price-before visually-hidden"></span>
             <a class="button goods-button" href="#">12500</a>
             <ul class="actions-items visually-hidden">
@@ -339,10 +397,5 @@
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </p>
     </footer>
-    <section class="modal modal-write-us">
-      <h2 class="visually-hidden">Напишите нам</h2>
-      <!--Здесь будет форма-->
-      <span class="modal-close">x</span>
-    </section>
   </body>
 </html>
